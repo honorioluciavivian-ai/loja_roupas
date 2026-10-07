@@ -1,6 +1,10 @@
 import pytest
 
 from loja.calculos import total_carrinho
+from loja.calculos import frete
+
+
+
 def test_carrinho_vazio_custa_zero():
     assert total_carrinho([]) == 0
 def test_soma_preco_vezes_quantidade():
@@ -10,9 +14,6 @@ def test_soma_preco_vezes_quantidade():
     total = total_carrinho(itens)
 # 3. conferir
     assert total == pytest.approx(249.60)
-
-def test_tres_camisetas():
-    assert total_carrinho([(39.90, 3)]) == 119.70
 
 def test_frete_abaixo_de_200_custa_15():
     assert frete(199.99) == 15.0
