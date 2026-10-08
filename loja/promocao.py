@@ -14,7 +14,7 @@ class SemPromocao(Promocao):
     def aplicar(self, subtotal):
         return subtotal
 
-
+ 
 class Percentual(Promocao):
     def __init__(self, pct):
         if not 0 <= pct <= 100:
@@ -32,4 +32,4 @@ class Cupom(Promocao):
         self.valor = valor
 
     def aplicar(self, subtotal):
-        return max(subtotal - self.valor, 0)      
+        return max(subtotal - self.valor, 0)

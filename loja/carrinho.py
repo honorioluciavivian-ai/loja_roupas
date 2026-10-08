@@ -1,6 +1,6 @@
 from .calculos import frete, total_carrinho
 from .produto import Produto
-from .promocao import Promocao, SemPromocaoo
+from .promocao import Promocao, SemPromocao
 
 
 class CarrinhoFinalizadoError(Exception):
